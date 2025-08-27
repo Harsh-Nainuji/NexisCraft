@@ -107,6 +107,7 @@ export default function ProjectsPage() {
       {/* Page content */}
       <main className="px-4 pb-12 mx-auto max-w-7xl sm:px-6 pt-28 sm:pb-16">
         {/* Back button */}
+        <br />
         <div className="mb-6">
           <Button href="/" variant="glass" size="sm">← Back to Home</Button>
         </div>
