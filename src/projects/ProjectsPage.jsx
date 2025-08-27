@@ -109,7 +109,7 @@ export default function ProjectsPage() {
         {/* Back button */}
         <br />
         <div className="mb-6">
-          <Button href="/" variant="glass" size="sm">← Back to Home</Button>
+          <Button href="/" variant="glass" size="sm" mt-5px>← Back to Home</Button>
         </div>
         
         <motion.h2
