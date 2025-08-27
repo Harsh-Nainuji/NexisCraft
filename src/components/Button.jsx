@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const base =
   'inline-flex items-center justify-center rounded-full font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-0 disabled:opacity-60 disabled:cursor-not-allowed';
@@ -38,8 +39,31 @@ export default function Button({
   prismStops,
   ...rest
 }) {
-  const Tag = as;
   const classes = `${base} ${sizes[size]} ${variants[variant]} ${className}`;
+  
+  // Check if href is internal (starts with /) and use Link for internal navigation
+  if (href && href.startsWith('/') && as === 'a') {
+    return (
+      <Link to={href} className={classes} {...rest}>
+        {variant === 'prism' && (
+          <>
+            <span
+              className="absolute -inset-px rounded-full opacity-80 blur-sm animate-[spin_6s_linear_infinite]"
+              style={{
+                background:
+                  `conic-gradient(${prismStops?.join(', ') || 'rgba(168,85,247,0.9), rgba(59,130,246,0.9), rgba(236,72,153,0.9), rgba(250,204,21,0.9), rgba(168,85,247,0.9)'})`,
+              }}
+            />
+            <span className="absolute inset-[2px] rounded-full bg-white/10 backdrop-blur-md border border-white/20" />
+          </>
+        )}
+        <span className="relative z-10">{children}</span>
+        <span className="pointer-events-none absolute inset-0 rounded-full bg-gradient-to-t from-white/20 via-transparent to-white/5 opacity-0 hover:opacity-100 transition-opacity" />
+      </Link>
+    );
+  }
+  
+  const Tag = as;
   return (
     <Tag href={href} type={as === 'button' ? type : undefined} className={classes} {...rest}>
       {variant === 'prism' && (
