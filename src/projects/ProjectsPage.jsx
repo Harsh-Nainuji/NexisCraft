@@ -88,7 +88,7 @@ const projects = [
     description:
       // Description for News Website (NON-LIVE; with video)
       'Dynamic news platform with real-time updates, category filtering, and mobile-first design for breaking news consumption.',
-    image: '/child-hospital.jpeg', // Using hospital image as placeholder since no news image
+    image: '/News.jpeg', // News image
     liveUrl: '', // No live URL – shows a video button instead
     testimonial: '', // No testimonial (internal project)
     videoUrl: '/news.mp4', // Video opens in modal
