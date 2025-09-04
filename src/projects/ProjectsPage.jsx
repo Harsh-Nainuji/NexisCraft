@@ -39,6 +39,15 @@ const projects = [
       'Harsha has been doing great. He is always available for clients, and when I mentioned we needed to upgrade our website, he worked on it very quickly with an immediate response. Whenever I needed support, he was highly adaptable and showed great respect toward client requirements. His work was excellent.',
   },
   {
+    id: 'Ai Brand Kit',
+    title: 'Ai Brand Kit: Create your dream brand in seconds',
+    description:
+    //description for AI Brand Kit
+    'Ai Brand Kit is a platfrom that allows you to create your dream brand in seconds. It is a platffrom that allows you to create your dream brand with simple prompts.',
+    image:'/Ai-Brand.png',
+    liveUrl: 'https://ai-brandkit.vercel.app',
+  },
+  {
     id: 'coffee-shop',
     title: 'Coffee Shop — Brand Landing',
     description:

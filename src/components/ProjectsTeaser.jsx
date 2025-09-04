@@ -7,6 +7,7 @@ export default function ProjectsTeaser() {
     { id: 1, title: 'Design Clave — Elite UI/UX Studio', img: '/DesginClave.png' },
     { id: 2, title: 'BeSocialz — Social Meeting App (Landing)', img: '/besocialz.png' },
     { id: 3, title: 'Coffee Shop — Brand Landing', img: '/coffee-shop.jpeg' },
+    { id: 4, title: 'Ai Brand Kit: Create your dream brand in seconds',img: '/Ai-Brand.png' },
     
   ]
 
@@ -41,7 +42,7 @@ export default function ProjectsTeaser() {
               <div className="text-center md:w-1/2 md:text-left">
                 <h3 className="mb-3 text-2xl font-semibold sm:text-3xl">{item.title}</h3>
                 <p className="mb-5 text-sm leading-relaxed text-zinc-300 sm:text-base">
-                  Crafted for clarity and conversions. Clean UX, fast performance, and brand-consistent design.
+                  Crafted for Better Results, More Revenue , Better Branding and More Growth.
                 </p>
               </div>
             </motion.div>
