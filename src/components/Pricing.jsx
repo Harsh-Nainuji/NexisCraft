@@ -5,55 +5,55 @@ const tiers = [
   {
     name: "Web Essentials",
     price: "$499",
-    description: "Professional websites built to convert, not just look good.",
+    description: "Custom websites that actually drive results, not cookie-cutter templates.",
     features: [
-      "Custom responsive design",
-      "SEO-ready pages",
+      "Pixel perfect responsive design",
+      "SEO ready & fast performance",
       "Free website audit",
       "1:1 brainstorming session"
     ],
   },
   {
-    name: "Ecommerce Growth",
-    price: "$1,299",
-    description: "Sell smarter online with optimized ecommerce platforms.",
+    name: "Ecommerce Engine",
+    price: "$1,499",
+    description: "Fully custom ecommerce platforms built for speed and scalability.",
     features: [
-      "Shopify / WooCommerce setup",
-      "Conversion-focused product pages",
-      "Integrated payments & shipping",
-      "AI-powered product recommendations"
+      "Custom shopping cart & checkout (no templates)",
+      "Secure payment gateway integration",
+      "Dynamic product management system",
+      "AI-driven upsell & recommendation logic"
     ],
   },
   {
     name: "AI Integrations",
     price: "$1,999",
-    description: "Supercharge existing sites with automation & intelligence.",
+    description: "Bring AI superpowers into your existing site or workflows.",
     features: [
-      "Custom AI chatbots & agents",
-      "CRM / email automation workflows",
-      "Third-party API integrations",
-      "Post-launch tuning for accuracy"
+      "Custom AI chatbots & support agents",
+      "Automated workflows (CRM, email, data sync)",
+      "API integrations with leading AI services",
+      "Post-launch tuning & optimization"
     ],
   },
   {
     name: "SaaS Build",
     price: "$3,499",
-    description: "Launch-ready SaaS products with scalable architecture.",
+    description: "Production-ready SaaS products engineered for scale.",
     features: [
-      "Authentication & subscriptions",
-      "Clean backend architecture",
+      "Scalable backend & clean architecture",
+      "Authentication & subscription billing",
       "Analytics & reporting dashboards",
-      "Ongoing feature support"
+      "Ongoing feature development support"
     ],
   },
   {
     name: "Enterprise",
     price: "Custom",
-    description: "Tailored systems for complex projects & aggressive scaling.",
+    description: "Tailored SaaS & AI systems for high-growth companies.",
     features: [
-      "Custom roadmap & dedicated team",
-      "Enterprise-level AI agents & automation",
-      "Scalable infrastructure design",
+      "Custom roadmap & dedicated developer team",
+      "Enterprise-grade AI agents & automations",
+      "Infrastructure design & scaling strategy",
       "Flexible retainer models"
     ],
     custom: true,
