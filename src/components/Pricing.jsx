@@ -6,7 +6,6 @@ const tiers = [
     name: "Web Essentials",
     price: "$499",
     bestFor: "Best for small businesses & personal brands",
-    valueAdd: "Worth $650 in value",
     description: "Custom websites that actually drive results, not cookie-cutter templates.",
     features: [
       "Pixel perfect responsive design",
@@ -14,12 +13,15 @@ const tiers = [
       "Free website audit",
       "1:1 brainstorming session",
     ],
+    extras: [
+      "Transparent Pricing — no hidden costs",
+      "Full IP Ownership",
+    ],
   },
   {
     name: "Ecommerce Engine",
     price: "$1,499",
     bestFor: "Best for ecommerce founders scaling online",
-    valueAdd: "Worth $1,800 in value",
     description: "Fully custom ecommerce platforms built for speed and scalability.",
     features: [
       "Custom shopping cart & checkout (no templates)",
@@ -27,12 +29,15 @@ const tiers = [
       "Dynamic product management system",
       "AI-driven upsell & recommendation logic",
     ],
+    extras: [
+      "Scalable Delivery — future-proof foundation",
+      "ROI-Focused Approach",
+    ],
   },
   {
     name: "AI Integrations",
     price: "$1,999",
     bestFor: "Best for companies adding AI superpowers",
-    valueAdd: "Worth $2,400 in value",
     description: "Bring AI superpowers into your existing site or workflows.",
     features: [
       "Custom AI chatbots & support agents",
@@ -40,12 +45,15 @@ const tiers = [
       "API integrations with leading AI services",
       "Post-launch tuning & optimization",
     ],
+    extras: [
+      "Brainstorming Sessions included",
+      "Transparent Pricing & scope clarity",
+    ],
   },
   {
     name: "SaaS Build",
     price: "$3,499",
     bestFor: "Best for startups building their first SaaS",
-    valueAdd: "Worth $4,200 in value",
     description: "Production-ready SaaS products engineered for scale.",
     features: [
       "Scalable backend & clean architecture",
@@ -53,18 +61,25 @@ const tiers = [
       "Analytics & reporting dashboards",
       "Ongoing feature development support",
     ],
+    extras: [
+      "Free Website Audit before dev",
+      "ROI-Focused product strategy",
+    ],
   },
   {
     name: "Enterprise",
     price: "Custom",
     bestFor: "Best for high-growth companies",
-    valueAdd: "Custom engagement — massive ROI",
     description: "Tailored SaaS & AI systems for high-growth companies.",
     features: [
       "Custom roadmap & dedicated developer team",
       "Enterprise-grade AI agents & automations",
       "Infrastructure design & scaling strategy",
       "Flexible retainer models",
+    ],
+    extras: [
+      "Dedicated long-term partner support",
+      "Custom engagement, maximum ROI",
     ],
     custom: true,
   },
@@ -107,14 +122,25 @@ const Pricing = () => {
               <div>
                 <h3 className="mb-1 text-xl font-semibold">{tier.name}</h3>
                 <p className="mb-1 text-3xl font-bold">{tier.price}</p>
-                <p className="text-sm text-green-400 mb-2">{tier.bestFor}</p>
-                <p className="text-sm text-yellow-400 font-medium mb-4">{tier.valueAdd}</p>
+                <p className="text-sm text-green-400 mb-4">{tier.bestFor}</p>
                 <p className="mb-6 text-sm opacity-80">{tier.description}</p>
-                <ul className="mb-6 space-y-2 text-left">
+                
+                {/* Core features */}
+                <ul className="mb-4 space-y-2 text-left">
                   {tier.features.map((f, idx) => (
                     <li key={idx} className="flex items-start gap-2">
                       <span className="text-green-400">✔</span>
                       <span>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Extras */}
+                <ul className="mb-6 space-y-2 text-left opacity-80">
+                  {tier.extras?.map((e, idx) => (
+                    <li key={idx} className="flex items-start gap-2">
+                      <span className="text-yellow-400">★</span>
+                      <span>{e}</span>
                     </li>
                   ))}
                 </ul>
