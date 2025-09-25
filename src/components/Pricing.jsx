@@ -4,7 +4,7 @@ import Button from "./Button";
 const tiers = [
   {
     name: "Starter",
-    price: "$499",
+    price: "$299",
     description: "Perfect for early-stage MVPs and small projects.",
     features: [
       "MVP launch within weeks",
@@ -14,11 +14,22 @@ const tiers = [
     ],
   },
   {
+    name: "Standard",
+    price: "$499",
+    description: "For growing projects needing more features and support.",
+    features: [
+      "All Starter features",
+      "Additional integrations",
+      "Faster response support",
+      "Analytics & reporting"
+    ],
+  },
+  {
     name: "Growth",
     price: "$999",
     description: "Ideal for scaling businesses with custom needs.",
     features: [
-      "All Starter features",
+      "All Standard features",
       "Advanced integrations",
       "Priority support",
       "Post-launch guidance"
@@ -48,6 +59,7 @@ const tiers = [
     custom: true,
   },
 ];
+
 
 const values = [
   "Rapid MVP Launch: We ship usable products quickly without unnecessary bloat.",
