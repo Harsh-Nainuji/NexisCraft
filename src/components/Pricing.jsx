@@ -5,56 +5,66 @@ const tiers = [
   {
     name: "Web Essentials",
     price: "$499",
+    bestFor: "Best for small businesses & personal brands",
+    valueAdd: "Worth $650 in value",
     description: "Custom websites that actually drive results, not cookie-cutter templates.",
     features: [
       "Pixel perfect responsive design",
       "SEO ready & fast performance",
       "Free website audit",
-      "1:1 brainstorming session"
+      "1:1 brainstorming session",
     ],
   },
   {
     name: "Ecommerce Engine",
     price: "$1,499",
+    bestFor: "Best for ecommerce founders scaling online",
+    valueAdd: "Worth $1,800 in value",
     description: "Fully custom ecommerce platforms built for speed and scalability.",
     features: [
       "Custom shopping cart & checkout (no templates)",
       "Secure payment gateway integration",
       "Dynamic product management system",
-      "AI-driven upsell & recommendation logic"
+      "AI-driven upsell & recommendation logic",
     ],
   },
   {
     name: "AI Integrations",
     price: "$1,999",
+    bestFor: "Best for companies adding AI superpowers",
+    valueAdd: "Worth $2,400 in value",
     description: "Bring AI superpowers into your existing site or workflows.",
     features: [
       "Custom AI chatbots & support agents",
       "Automated workflows (CRM, email, data sync)",
       "API integrations with leading AI services",
-      "Post-launch tuning & optimization"
+      "Post-launch tuning & optimization",
     ],
   },
   {
     name: "SaaS Build",
     price: "$3,499",
+    bestFor: "Best for startups building their first SaaS",
+    valueAdd: "Worth $4,200 in value",
     description: "Production-ready SaaS products engineered for scale.",
     features: [
       "Scalable backend & clean architecture",
       "Authentication & subscription billing",
       "Analytics & reporting dashboards",
-      "Ongoing feature development support"
+      "Ongoing feature development support",
     ],
   },
   {
     name: "Enterprise",
     price: "Custom",
+    bestFor: "Best for high-growth companies",
+    valueAdd: "Custom engagement — massive ROI",
     description: "Tailored SaaS & AI systems for high-growth companies.",
     features: [
       "Custom roadmap & dedicated developer team",
       "Enterprise-grade AI agents & automations",
       "Infrastructure design & scaling strategy",
-      "Flexible retainer models"
+      "Flexible retainer models",
     ],
     custom: true,
   },
@@ -72,7 +82,7 @@ const values = [
 const Pricing = () => {
   return (
     <section className="py-16 sm:py-20 md:py-24 bg-black text-[var(--text)] relative overflow-hidden px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto text-center">
+      <div className="max-w-7xl mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -83,8 +93,8 @@ const Pricing = () => {
           Pricing Plans
         </motion.h2>
 
-        {/* Pricing grid */}
-        <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-4">
+        {/* Pricing grid: 3 top row, 2 second row */}
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {tiers.map((tier, i) => (
             <motion.div
               key={tier.name}
@@ -95,8 +105,10 @@ const Pricing = () => {
               className="flex flex-col justify-between p-6 border rounded-2xl bg-zinc-900 border-zinc-800"
             >
               <div>
-                <h3 className="mb-2 text-xl font-semibold">{tier.name}</h3>
-                <p className="mb-4 text-3xl font-bold">{tier.price}</p>
+                <h3 className="mb-1 text-xl font-semibold">{tier.name}</h3>
+                <p className="mb-1 text-3xl font-bold">{tier.price}</p>
+                <p className="text-sm text-green-400 mb-2">{tier.bestFor}</p>
+                <p className="text-sm text-yellow-400 font-medium mb-4">{tier.valueAdd}</p>
                 <p className="mb-6 text-sm opacity-80">{tier.description}</p>
                 <ul className="mb-6 space-y-2 text-left">
                   {tier.features.map((f, idx) => (
