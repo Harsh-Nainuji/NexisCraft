@@ -3,71 +3,70 @@ import Button from "./Button";
 
 const tiers = [
   {
-    name: "Starter",
-    price: "$299",
-    description: "Perfect for early-stage MVPs and small projects.",
-    features: [
-      "MVP launch within weeks",
-      "Basic integrations",
-      "Email support",
-      "Full IP ownership"
-    ],
-  },
-  {
-    name: "Standard",
+    name: "Web Essentials",
     price: "$499",
-    description: "For growing projects needing more features and support.",
+    description: "Professional websites built to convert, not just look good.",
     features: [
-      "All Starter features",
-      "Additional integrations",
-      "Faster response support",
-      "Analytics & reporting"
+      "Custom responsive design",
+      "SEO-ready pages",
+      "Free website audit",
+      "1:1 brainstorming session"
     ],
   },
   {
-    name: "Growth",
-    price: "$999",
-    description: "Ideal for scaling businesses with custom needs.",
+    name: "Ecommerce Growth",
+    price: "$1,299",
+    description: "Sell smarter online with optimized ecommerce platforms.",
     features: [
-      "All Standard features",
-      "Advanced integrations",
-      "Priority support",
-      "Post-launch guidance"
+      "Shopify / WooCommerce setup",
+      "Conversion-focused product pages",
+      "Integrated payments & shipping",
+      "AI-powered product recommendations"
     ],
   },
   {
-    name: "Pro",
+    name: "AI Integrations",
     price: "$1,999",
-    description: "For serious teams ready to scale aggressively.",
+    description: "Supercharge existing sites with automation & intelligence.",
     features: [
-      "All Growth features",
-      "Dedicated dev hours",
-      "Feature-driven pricing",
-      "ROI-focused delivery"
+      "Custom AI chatbots & agents",
+      "CRM / email automation workflows",
+      "Third-party API integrations",
+      "Post-launch tuning for accuracy"
+    ],
+  },
+  {
+    name: "SaaS Build",
+    price: "$3,499",
+    description: "Launch-ready SaaS products with scalable architecture.",
+    features: [
+      "Authentication & subscriptions",
+      "Clean backend architecture",
+      "Analytics & reporting dashboards",
+      "Ongoing feature support"
     ],
   },
   {
     name: "Enterprise",
     price: "Custom",
-    description: "Tailored solutions for enterprises & complex projects.",
+    description: "Tailored systems for complex projects & aggressive scaling.",
     features: [
-      "Custom roadmap",
-      "Scalable architecture",
-      "Dedicated support team",
-      "Flexible retainers"
+      "Custom roadmap & dedicated team",
+      "Enterprise-level AI agents & automation",
+      "Scalable infrastructure design",
+      "Flexible retainer models"
     ],
     custom: true,
   },
 ];
 
-
 const values = [
-  "Rapid MVP Launch: We ship usable products quickly without unnecessary bloat.",
-  "Transparent Costs: No hidden fees. You choose APIs, databases, and integrations that fit your goals.",
-  "Feature-Driven Pricing: We quote after defining features together, so you know exactly what you pay for.",
-  "Full IP Ownership: 100% rights handed over cleanly at project completion.",
-  "Post-Launch Guidance: We support you for a smooth transition and offer optional retainers.",
-  "ROI-Focused Delivery: Every feature is designed to generate measurable value for your business.",
+  "Free Website Audits: Spot gaps & opportunities before you commit.",
+  "Brainstorming Sessions: We work with you, not just for you.",
+  "Transparent Pricing: Clear scope, no surprise bills.",
+  "Full IP Ownership: You own 100% of code & assets.",
+  "Scalable Delivery: From small business sites to enterprise SaaS.",
+  "ROI-Focused Approach: Every feature tied to measurable outcomes.",
 ];
 
 const Pricing = () => {
@@ -111,15 +110,15 @@ const Pricing = () => {
 
               {tier.custom ? (
                 <Button
-                  href="mailto:nexiscraft.dev@gmail.com?subject=Request%20Custom%20Quota%20%7C%20NexisCraft"
+                  href="mailto:nexiscraft.dev@gmail.com?subject=Request%20Custom%20Quote%20%7C%20NexisCraft"
                   variant="prism"
                   size="md"
                 >
-                  Request Custom Quota
+                  Request Custom Quote
                 </Button>
               ) : (
                 <Button
-                  href="mailto:nexiscraft.dev@gmail.com?subject=Start%20with%20${tier.name}%20Plan%20%7C%20NexisCraft"
+                  href={`mailto:nexiscraft.dev@gmail.com?subject=Start%20with%20${tier.name}%20Plan%20%7C%20NexisCraft`}
                   variant="prism"
                   size="md"
                 >
@@ -138,7 +137,7 @@ const Pricing = () => {
           transition={{ duration: 0.6 }}
           className="mt-20 mb-8 text-2xl font-bold sm:text-3xl font-heading"
         >
-          Our Value
+          Why Choose Us
         </motion.h3>
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
