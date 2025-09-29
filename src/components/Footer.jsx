@@ -14,8 +14,12 @@ const Footer = () => {
           transition={{ duration: 0.6 }}
           className="text-center md:text-left"
         >
-          <h3 className="text-lg sm:text-xl font-heading font-bold">NexisCraft</h3>
-          <p className="text-zinc-400 text-xs sm:text-sm mt-1">Built for founders who want product + growth.</p>
+          <h3 className="text-lg sm:text-xl font-heading font-bold">
+            NexisCraft
+          </h3>
+          <p className="text-zinc-400 text-xs sm:text-sm mt-1">
+            Built for founders who want product + growth.
+          </p>
         </motion.div>
 
         {/* Right: Contact / Socials */}
@@ -32,7 +36,7 @@ const Footer = () => {
               href="https://www.instagram.com/nexiscraft/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[var(--red)] hover:text-[var(--red-hover)] transition-colors duration-300 p-2 hover:bg-[var(--red)]/10 rounded-lg"
+              className="text-zinc-200 p-2 rounded-lg"
             >
               <FaInstagram size={20} />
             </a>
@@ -40,7 +44,7 @@ const Footer = () => {
               href="https://www.linkedin.com/in/nexiscraft/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[var(--yellow)] hover:text-[var(--yellow-hover)] transition-colors duration-300 p-2 hover:bg-[var(--yellow)]/10 rounded-lg"
+              className="text-zinc-200 p-2 rounded-lg"
             >
               <FaLinkedin size={20} />
             </a>
@@ -48,7 +52,7 @@ const Footer = () => {
               href="https://x.com/NexisCraft"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[var(--accent)] hover:text-white transition-colors duration-300 p-2 hover:bg-[var(--accent)]/10 rounded-lg"
+              className="text-zinc-200 p-2 rounded-lg"
             >
               <FaXTwitter size={20} />
             </a>

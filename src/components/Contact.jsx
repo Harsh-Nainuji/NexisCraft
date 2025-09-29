@@ -69,25 +69,25 @@ const Contact = () => {
                   href="https://www.instagram.com/nexiscraft/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[var(--red)] hover:text-[var(--red-hover)] transition-colors duration-300 p-2 hover:bg-[var(--red)]/10 rounded-lg"
+                  className="text-white hover:text-pink-500 transition-colors duration-300 p-2 hover:bg-pink-500/10 rounded-lg"
                 >
-                  <FaInstagram size={18} />
+                  <FaInstagram size={26} />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/nexiscraft/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[var(--yellow)] hover:text-[var(--yellow-hover)] transition-colors duration-300 p-2 hover:bg-[var(--yellow)]/10 rounded-lg"
+                  className="text-white hover:text-blue-400 transition-colors duration-300 p-2 hover:bg-blue-400/10 rounded-lg"
                 >
-                  <FaLinkedin size={18} />
+                  <FaLinkedin size={26} />
                 </a>
                 <a
                   href="https://x.com/NexisCraft"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[var(--accent)] hover:text-white transition-colors duration-300 p-2 hover:bg-[var(--accent)]/10 rounded-lg"
+                  className="text-white hover:text-gray-300 transition-colors duration-300 p-2 hover:bg-gray-300/10 rounded-lg"
                 >
-                  <FaXTwitter size={18} />
+                  <FaXTwitter size={26} />
                 </a>
               </div>
             </div>

@@ -1,109 +1,81 @@
 import { motion } from "framer-motion";
 import Button from "./Button";
 
+// Pricing tiers (with SaaS + AI agent integration language)
 const tiers = [
   {
     name: "Web Essentials",
     price: "$499",
-    bestFor: "Best for small businesses & personal brands",
-    description: "Custom websites that actually drive results, not cookie-cutter templates.",
+    description: "Perfect for early-stage SaaS MVPs and AI-driven prototypes.",
     features: [
-      "Pixel perfect responsive design",
-      "SEO ready & fast performance",
-      "Free website audit",
-      "1:1 brainstorming session",
-    ],
-    extras: [
-      "Transparent Pricing — no hidden costs",
-      "Full IP Ownership",
+      "MVP launch within weeks",
+      "Basic SaaS integrations",
+      "Email + chat support",
+      "AI assistant trial included",
+      "Full IP ownership",
     ],
   },
   {
-    name: "Ecommerce Engine",
-    price: "$1,499",
-    bestFor: "Best for ecommerce founders scaling online",
-    description: "Fully custom ecommerce platforms built for speed and scalability.",
+    name: "Growth",
+    price: "$999",
+    description: "Ideal for scaling SaaS products with AI agents built-in.",
     features: [
-      "Custom shopping cart & checkout (no templates)",
-      "Secure payment gateway integration",
-      "Dynamic product management system",
-      "AI-driven upsell & recommendation logic",
-    ],
-    extras: [
-      "Scalable Delivery — future-proof foundation",
-      "ROI-Focused Approach",
+      "All Starter features",
+      "Advanced SaaS integrations",
+      "Priority AI agent support",
+      "Analytics & insights dashboards",
+      "Post-launch guidance",
     ],
   },
   {
     name: "AI Integrations",
     price: "$1,999",
-    bestFor: "Best for companies adding AI superpowers",
-    description: "Bring AI superpowers into your existing site or workflows.",
+    description: "For serious teams scaling SaaS with AI-first workflows.",
     features: [
-      "Custom AI chatbots & support agents",
-      "Automated workflows (CRM, email, data sync)",
-      "API integrations with leading AI services",
-      "Post-launch tuning & optimization",
-    ],
-    extras: [
-      "Brainstorming Sessions included",
-      "Transparent Pricing & scope clarity",
-    ],
-  },
-  {
-    name: "SaaS Build",
-    price: "$3,499",
-    bestFor: "Best for startups building their first SaaS",
-    description: "Production-ready SaaS products engineered for scale.",
-    features: [
-      "Scalable backend & clean architecture",
-      "Authentication & subscription billing",
-      "Analytics & reporting dashboards",
-      "Ongoing feature development support",
-    ],
-    extras: [
-      "Free Website Audit before dev",
-      "ROI-Focused product strategy",
+      "All Growth features",
+      "Dedicated dev & AI training hours",
+      "Feature-driven pricing",
+      "Custom AI agent integration",
+      "ROI-focused delivery",
     ],
   },
   {
     name: "Enterprise",
     price: "Custom",
-    bestFor: "Best for high-growth companies",
-    description: "Tailored SaaS & AI systems for high-growth companies.",
+    description: "Tailored SaaS + AI agent solutions for enterprises.",
     features: [
-      "Custom roadmap & dedicated developer team",
-      "Enterprise-grade AI agents & automations",
-      "Infrastructure design & scaling strategy",
-      "Flexible retainer models",
-    ],
-    extras: [
-      "Dedicated long-term partner support",
-      "Custom engagement, maximum ROI",
+      "Custom roadmap & AI strategy",
+      "Scalable architecture",
+      "Dedicated support team",
+      "Flexible retainers",
+      "Enterprise-grade security",
     ],
     custom: true,
   },
 ];
 
+// Value points (updated for SaaS + AI agent branding)
 const values = [
-  "Free Website Audits: Spot gaps & opportunities before you commit.",
-  "Brainstorming Sessions: We work with you, not just for you.",
-  "Transparent Pricing: Clear scope, no surprise bills.",
-  "Full IP Ownership: You own 100% of code & assets.",
-  "Scalable Delivery: From small business sites to enterprise SaaS.",
-  "ROI-Focused Approach: Every feature tied to measurable outcomes.",
+  "AI-Ready Architecture: Every project designed to integrate AI agents effortlessly.",
+  "Rapid SaaS MVP Launch: We ship usable SaaS products quickly without bloat.",
+  "Transparent Costs: No hidden fees — you choose APIs, AI models & integrations.",
+  "Feature-Driven Pricing: We quote after defining features together, no surprises.",
+  "Full IP Ownership: 100% rights handed over cleanly at project completion.",
+  "Post-Launch Guidance: Smooth transition with optional SaaS retainers.",
+  "ROI-Focused Delivery: Features designed to generate measurable business value.",
 ];
 
 const Pricing = () => {
   return (
-    <section className="py-16 sm:py-20 md:py-24 bg-black text-[var(--text)] relative overflow-hidden px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto text-center">
+    <section className="py-16 sm:py-20 md:py-24 bg-gradient-to-b from-[#0a0014] via-[#130025] to-black text-[var(--text)] relative overflow-hidden px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto text-center">
+        {/* Section Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-12 text-3xl font-bold sm:text-4xl md:text-5xl sm:mb-16 font-heading"
+          className="mb-12 text-3xl font-bold sm:text-4xl md:text-5xl sm:mb-16 font-heading text-white"
         >
           Pricing Plans
         </motion.h2>
@@ -117,18 +89,20 @@ const Pricing = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="flex flex-col justify-between p-6 border rounded-2xl bg-zinc-900 border-zinc-800"
+              whileHover={{ scale: 1.03, rotateX: 3, rotateY: -3 }}
+              className="relative flex flex-col justify-between p-6 border rounded-2xl bg-white/5 backdrop-blur-xl border-white/10 shadow-xl"
             >
-              <div>
-                <h3 className="mb-1 text-xl font-semibold">{tier.name}</h3>
-                <p className="mb-1 text-3xl font-bold">{tier.price}</p>
-                <p className="text-sm text-green-400 mb-4">{tier.bestFor}</p>
-                <p className="mb-6 text-sm opacity-80">{tier.description}</p>
-                
-                {/* Core features */}
-                <ul className="mb-4 space-y-2 text-left">
+              {/* Glow on hover */}
+              <div className="absolute inset-0 transition duration-500 opacity-0 bg-gradient-to-tr from-green-500/10 via-transparent to-blue-500/10 group-hover:opacity-100 rounded-2xl"></div>
+
+              <div className="relative z-10">
+                <h3 className="mb-2 text-xl font-semibold text-white">{tier.name}</h3>
+                <p className="mb-4 text-3xl font-bold text-green-400">{tier.price}</p>
+                <p className="mb-6 text-sm text-zinc-300">{tier.description}</p>
+
+                <ul className="mb-6 space-y-2 text-left">
                   {tier.features.map((f, idx) => (
-                    <li key={idx} className="flex items-start gap-2">
+                    <li key={idx} className="flex items-start gap-2 text-zinc-200">
                       <span className="text-green-400">✔</span>
                       <span>{f}</span>
                     </li>
@@ -157,6 +131,7 @@ const Pricing = () => {
               ) : (
                 <Button
                   href={`mailto:nexiscraft.dev@gmail.com?subject=Start%20with%20${tier.name}%20Plan%20%7C%20NexisCraft`}
+                  href={`mailto:nexiscraft.dev@gmail.com?subject=Start%20with%20${tier.name}%20Plan%20%7C%20NexisCraft`}
                   variant="prism"
                   size="md"
                 >
@@ -173,7 +148,7 @@ const Pricing = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mt-20 mb-8 text-2xl font-bold sm:text-3xl font-heading"
+          className="mt-20 mb-8 text-2xl font-bold sm:text-3xl font-heading text-white"
         >
           Why Choose Us
         </motion.h3>
@@ -186,7 +161,7 @@ const Pricing = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="p-4 border sm:p-6 rounded-2xl bg-zinc-900 border-zinc-800"
+              className="p-4 border sm:p-6 rounded-2xl bg-white/5 backdrop-blur-xl border-white/10 text-zinc-200"
             >
               <div className="flex items-start gap-3">
                 <span className="text-green-400">✔</span>

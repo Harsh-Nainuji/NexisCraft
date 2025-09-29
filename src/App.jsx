@@ -1,19 +1,21 @@
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import QuickValue from './components/QuickValue';
-import ProjectsTeaser from './components/ProjectsTeaser';
-import Services from './components/Services';
-import SignatureServices from './components/SignatureServices';
-import CoreWebServices from './components/CoreWebServices';
-import TheBridgeMethod from './components/TheBridgeMethod';
-import Pricing from './components/Pricing';
-import FAQ from './components/FAQ';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import QuickValue from "./components/QuickValue";
+import ProjectsTeaser from "./components/ProjectsTeaser";
+import Services from "./components/Services";
+import SignatureServices from "./components/SignatureServices";
+import CoreWebServices from "./components/CoreWebServices";
+import TheBridgeMethod from "./components/TheBridgeMethod";
+import Pricing from "./components/Pricing";
+import FAQ from "./components/FAQ";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+
+// ---- Section wrapper with zero vertical gap ----
 function Section({ children, id, className }) {
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -24,10 +26,10 @@ function Section({ children, id, className }) {
     <motion.section
       ref={ref}
       id={id}
-      initial={{ opacity: 0, y: 50 }}
-      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      transition={{ duration: 0.8, ease: 'easeOut' }}
-      className={`py-12 sm:py-16 md:py-20 ${className || ''}`}
+      initial={{ opacity: 0, y: 20 }}
+      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className={`relative ${className || ""}`} // NO padding/margin
     >
       {children}
     </motion.section>
@@ -39,60 +41,60 @@ function App() {
 
   useEffect(() => {
     if (darkMode) {
-      document.documentElement.classList.add('dark');
+      document.documentElement.classList.add("dark");
     } else {
-      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.remove("dark");
     }
   }, [darkMode]);
 
   return (
-    <div className="min-h-screen relative bg-black text-white">
+    <div className="min-h-screen relative text-white">
       {/* Navbar */}
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
 
-      {/* Sections */}
+      {/* Hero */}
       <Section id="home">
         <Hero />
       </Section>
 
-      <Section id="quickvalue">
-        <QuickValue />
-      </Section>
+      {/* Main sections */}
+      <div>
+        <Section id="quickvalue">
+          <QuickValue />
+        </Section>
 
-      <Section id="projects" className="pt-0">
-        <ProjectsTeaser />
-      </Section>
+        <Section id="projects">
+          <ProjectsTeaser />
+        </Section>
 
-      <Section id="services">
-        <Services />
-      </Section>
+        <Section id="services">
+          <CoreWebServices />
+        </Section>
 
-      <Section id="signature">
-        <SignatureServices />
-      </Section>
+        <Section id="signature">
+          <SignatureServices />
+        </Section>
 
-      <Section id="coreweb">
-        <CoreWebServices />
-      </Section>
+        
+        <Section id="process">
+          <TheBridgeMethod />
+        </Section>
 
-      <Section id="process">
-        <TheBridgeMethod />
-      </Section>
+        <Section id="pricing">
+          <Pricing />
+        </Section>
 
-      <Section id="pricing">
-        <Pricing />
-      </Section>
+        <Section id="faq">
+          <FAQ />
+        </Section>
 
-      <Section id="faq">
-        <FAQ />
-      </Section>
+        <Section id="contact">
+          <Contact />
+        </Section>
 
-      <Section id="contact">
-        <Contact />
-      </Section>
-
-      {/* Footer */}
-      <Footer />
+        {/* Footer */}
+        <Footer />
+      </div>
     </div>
   );
 }
