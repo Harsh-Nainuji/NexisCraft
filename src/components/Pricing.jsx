@@ -5,7 +5,7 @@ import Button from "./Button";
 const tiers = [
   {
     name: "Web Essentials",
-    price: "$89",
+    price: "$89*",
     bestFor: "Best for small businesses & personal brands",
     description: "Custom websites that actually drive results, not cookie-cutter templates.",
     features: [
@@ -21,7 +21,7 @@ const tiers = [
   },
   {
     name: "Ecommerce Engine",
-    price: "$349",
+    price: "$349*",
     bestFor: "Best for ecommerce founders scaling online",
     description: "Fully custom ecommerce platforms built for speed and scalability.",
     features: [
@@ -37,7 +37,7 @@ const tiers = [
   },
   {
     name: "AI Integrations",
-    price: "$555",
+    price: "$555*",
     bestFor: "Best for companies adding AI superpowers",
     description: "Bring AI superpowers into your existing site or workflows.",
     features: [
@@ -53,7 +53,7 @@ const tiers = [
   },
   {
     name: "SaaS Build",
-    price: "$1489",
+    price: "$1489*",
     bestFor: "Best for startups building their first SaaS",
     description: "Production-ready SaaS products engineered for scale.",
     features: [
@@ -163,7 +163,6 @@ const Pricing = () => {
               ) : (
                 <Button
                   href={`mailto:nexiscraft.dev@gmail.com?subject=Start%20with%20${tier.name}%20Plan%20%7C%20NexisCraft`}
-                  href={`mailto:nexiscraft.dev@gmail.com?subject=Start%20with%20${tier.name}%20Plan%20%7C%20NexisCraft`}
                   variant="prism"
                   size="md"
                 >
@@ -202,6 +201,11 @@ const Pricing = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Disclaimer */}
+        <p className="mt-12 text-sm text-zinc-400 italic">
+          *All listed prices are estimates. Final cost may go up or down depending on your exact requirements and project scope.
+        </p>
       </div>
     </section>
   );
