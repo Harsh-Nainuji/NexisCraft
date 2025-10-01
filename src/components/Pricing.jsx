@@ -5,7 +5,7 @@ import Button from "./Button";
 const tiers = [
   {
     name: "Web Essentials",
-    price: "$499",
+    price: "$89",
     bestFor: "Best for small businesses & personal brands",
     description: "Custom websites that actually drive results, not cookie-cutter templates.",
     features: [
@@ -21,7 +21,7 @@ const tiers = [
   },
   {
     name: "Ecommerce Engine",
-    price: "$1,499",
+    price: "$349",
     bestFor: "Best for ecommerce founders scaling online",
     description: "Fully custom ecommerce platforms built for speed and scalability.",
     features: [
@@ -37,7 +37,7 @@ const tiers = [
   },
   {
     name: "AI Integrations",
-    price: "$1,999",
+    price: "$555",
     bestFor: "Best for companies adding AI superpowers",
     description: "Bring AI superpowers into your existing site or workflows.",
     features: [
@@ -53,7 +53,7 @@ const tiers = [
   },
   {
     name: "SaaS Build",
-    price: "$3,499",
+    price: "$1489",
     bestFor: "Best for startups building their first SaaS",
     description: "Production-ready SaaS products engineered for scale.",
     features: [
