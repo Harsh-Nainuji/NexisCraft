@@ -9,7 +9,7 @@ const navItems = [
   { name: "Projects", href: "/", hash: "#projects" },
   { name: "Services", href: "/", hash: "#services" },
   { name: "Process", href: "/", hash: "#process" },
-  { name: "Pricing", href: "/", hash: "#pricing" },
+  // { name: "Pricing", href: "/", hash: "#pricing" }, // 🔹 Temporarily commented out
   { name: "FAQ", href: "/", hash: "#faq" },
   { name: "Contact", href: "/", hash: "#contact" },
 ];
