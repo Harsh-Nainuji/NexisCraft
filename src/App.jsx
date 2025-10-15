@@ -10,7 +10,7 @@ import Services from "./components/Services";
 import SignatureServices from "./components/SignatureServices";
 import CoreWebServices from "./components/CoreWebServices";
 import TheBridgeMethod from "./components/TheBridgeMethod";
-import Pricing from "./components/Pricing";
+// import Pricing from "./components/Pricing"; // 🔹 Commented out for now
 import FAQ from "./components/FAQ";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -75,14 +75,16 @@ function App() {
           <SignatureServices />
         </Section>
 
-        
         <Section id="process">
           <TheBridgeMethod />
         </Section>
 
+        {/* 🔹 Pricing section temporarily disabled */}
+        {/*
         <Section id="pricing">
           <Pricing />
         </Section>
+        */}
 
         <Section id="faq">
           <FAQ />
